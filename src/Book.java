@@ -59,4 +59,16 @@ public class Book {
     public String getDisplayText(String author, String title, String description){
         return "\nAuthor: "+author +"\n"+"Title: "+ title +"\n"+ "Description: "+description;
     }
+
+    public double calculatePrice(double price,int numBook){
+        double total=0.0;
+
+        if(isInStock==true && numBook >0){
+            total = price * numBook;
+        }
+        else{
+            System.out.println("Sorry you do not have a book.");
+        }
+        return total;
+    }
 }
